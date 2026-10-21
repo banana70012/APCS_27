@@ -1,16 +1,27 @@
 /*
- *	Author:  
- *  Date: 
+ *	Author: AJ Conroy
+ *  Date: 10/14/26
 */
 
 import java.util.Scanner;
 
 class starter {
+	public static void cheese_and_fries(String cheese){
+	System.out.println(cheese);
+	return;	
+	}
+	public static void cheese_and_fries_to_the_power_of_two(String cheese, String fries){
+	System.out.println(cheese+" "+fries);
+	return;	
+	}
 	public static void main(String args[]) {
-		// Your code goes below here
-
-
-
-		
+		Scanner This_name_does_not_have_any_limits_set_by_java_and_you_can_make_the_length_as_long_as_you_want = new Scanner(System.in);
+		System.out.print("Please input a sentence! :");
+		String This_name_also_does_not_have_any_limits_set_by_java_so_I_will_make_it_as_long_as_I_will_until_I_give_up_pizza_pizza_pizza_pizza_pizza_pizza_pizza_pizza_pizza_pizza_pizza_pizza_pizza_pizza_pizza_pizza_pizza_pizza_pizza = This_name_does_not_have_any_limits_set_by_java_and_you_can_make_the_length_as_long_as_you_want.nextLine();
+		System.out.print("Please input another sentence! :");
+		String Potato_Potato_Potato_Potato_Potato_Potato_Potato_Potato_Potato_Potato_Potato_Potato_Potato_Potato_Potato_Potato_Potato_Potato_Potato_Potato_Potato_Potato_Potato_Potato_Potato_Potato_Potato_Potato_Potato_Potato_Potato = This_name_does_not_have_any_limits_set_by_java_and_you_can_make_the_length_as_long_as_you_want.nextLine();
+		System.out.println("This is using methods! :)");
+		cheese_and_fries(This_name_also_does_not_have_any_limits_set_by_java_so_I_will_make_it_as_long_as_I_will_until_I_give_up_pizza_pizza_pizza_pizza_pizza_pizza_pizza_pizza_pizza_pizza_pizza_pizza_pizza_pizza_pizza_pizza_pizza_pizza_pizza);
+		cheese_and_fries_to_the_power_of_two(This_name_also_does_not_have_any_limits_set_by_java_so_I_will_make_it_as_long_as_I_will_until_I_give_up_pizza_pizza_pizza_pizza_pizza_pizza_pizza_pizza_pizza_pizza_pizza_pizza_pizza_pizza_pizza_pizza_pizza_pizza_pizza, Potato_Potato_Potato_Potato_Potato_Potato_Potato_Potato_Potato_Potato_Potato_Potato_Potato_Potato_Potato_Potato_Potato_Potato_Potato_Potato_Potato_Potato_Potato_Potato_Potato_Potato_Potato_Potato_Potato_Potato_Potato);
 	}
 }

@@ -1,6 +1,6 @@
 /*
- *	Author:  
- *  Date: 
+ *	Author:  AJ Conroy
+ *  Date: 10/15/26
 */
 
 import java.io.*;
@@ -13,9 +13,53 @@ class starter {
 	static ArrayList<String> arr = new ArrayList<String>();
 
 	public static void main(String args[]) throws InterruptedException {
-		// Write your code here!
-
-		
+		Scanner wow_I_guess_I_am_about_to_go_on_another_rant_becuase_this_has_no_limt_chicken_chicken_chicken_chicken_chicken_chicken_chicken_chicken_chicken_chicken_chicken_chicken_chicken_chicken_chicken = new Scanner(System.in);
+		System.out.println("Welcome to the typing gaem!");
+		System.out.println("It is currently "+getTime()+" and the gaem is ready, are you?");
+		System.out.println("A sentence will be given to you and you must complete it as fast as you can.");
+		System.out.println(" ");
+		int play;
+		String sentence;
+		String usersentence;
+		Double time;
+		while(true){
+			System.out.println("Would you like to:");
+			System.out.println("Type user sentence 1");
+			System.out.println("Type random sentence 2");
+			System.out.println("Quit 3");
+			play = wow_I_guess_I_am_about_to_go_on_another_rant_becuase_this_has_no_limt_chicken_chicken_chicken_chicken_chicken_chicken_chicken_chicken_chicken_chicken_chicken_chicken_chicken_chicken_chicken.nextInt();
+			wow_I_guess_I_am_about_to_go_on_another_rant_becuase_this_has_no_limt_chicken_chicken_chicken_chicken_chicken_chicken_chicken_chicken_chicken_chicken_chicken_chicken_chicken_chicken_chicken.nextLine();
+			if(play==1){
+				System.out.println("Please input your sentence!");
+				sentence = wow_I_guess_I_am_about_to_go_on_another_rant_becuase_this_has_no_limt_chicken_chicken_chicken_chicken_chicken_chicken_chicken_chicken_chicken_chicken_chicken_chicken_chicken_chicken_chicken.nextLine();
+			}
+			else if(play==2){
+			System.out.println("Good luck!");
+			sentence = getSentence();	
+			}
+			else if(play==3){
+			System.out.println("Goodbye!");
+			break;
+			}
+			else{
+				System.out.println("You typed it in wrong!");
+				break;
+			}
+			System.out.println("_________________________________________");
+			System.out.println("           Your sentence is");
+			System.out.println(sentence);
+			System.out.println("_________________________________________");
+			countdown();
+			System.out.println(sentence);
+			startTimer();
+			usersentence = wow_I_guess_I_am_about_to_go_on_another_rant_becuase_this_has_no_limt_chicken_chicken_chicken_chicken_chicken_chicken_chicken_chicken_chicken_chicken_chicken_chicken_chicken_chicken_chicken.nextLine();
+			time = endTimer();
+			System.out.println("It took you "+time+" seconds");
+			System.out.println("Errors: "+compareSentences(sentence, usersentence));
+			System.out.println("Your letters per miniute is "+((double)(lettersInSentence(sentence)/time*60.0)));
+			System.out.println("Your wpm is "+(wordsInSentence(sentence)/time*60.0));
+			System.out.println("_______________________________________");
+		}
 	}
 
 	// This method returns the local current time as a String
