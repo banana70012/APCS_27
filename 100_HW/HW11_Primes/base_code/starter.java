@@ -1,14 +1,38 @@
 /*
- *	Author:
+ *	Author:AJ Conroy
  *  Date:
 */
 
 import java.util.Scanner;
 
+
 class starter {
+	
+	public static boolean checkPrime(int n){
+		int count2 = n-1;
+		while(count2>1){
+			if(n%count2==0){
+				return true;
+			}
+			count2--;
+		}
+		return false;
+	}
+	public static void printPrime(int n){
+		int count = n;
+		while(count>1){
+			if(checkPrime(count)){
+				System.out.println(count+ " is prime!");
+			}
+			else{
+				System.out.println(count+ " is not prime!");
+			}
+			count--;
+		}
+	}
 	public static void main(String args[]) {
-		// the string "I love to learn coding remotely." will appear in
-		// the command window when you compile and run this program.
-		System.out.print("I love to learn coding remotely.");
+		Scanner jimmy = new Scanner(System.in);
+		System.out.print("Please input a number: ");
+		printPrime(jimmy.nextInt());
 	}
 }

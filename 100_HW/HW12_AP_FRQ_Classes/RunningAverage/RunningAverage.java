@@ -6,7 +6,8 @@ public class RunningAverage{
 
     /** The average of the ratings that have been entered. */
     private double average;
-
+    private int newcount;
+    private double currentrating;
     // There are no other instance variables.
 
     /** Creates a RunningAverage object.
@@ -21,7 +22,7 @@ public class RunningAverage{
     * rating, as described in part (a).
     */
     public void updateAverage(double newVal){
-        /* to be implemented in part (a) */
+        average = (average*count+newVal)/(count+1);
     }
 
 
@@ -32,7 +33,18 @@ public class RunningAverage{
     * Precondition: num > 0
     */
     public int processNewRatings(int num){
-        /* to be implemented in part (b) */
+        
+        newcount = 1;
+        while(newcount<=num){
+            currentrating = getNewRating();
+            if(currentrating<=0){
+                updateAverage(currentrating);
+            }
+            else{
+                newcount++;
+            }
+        }
+        return newcount;
     }
 
     /** Returns a single numeric rating. */
